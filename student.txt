@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .border {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: auto;
+        }
+        h1 {
+            color: #333;
+        }
+        .buttons button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: white;
+        }
+        .buttons button:hover {
+            background-color: #0056b3;
+        }
+        .content {
+            margin-top: 20px;
+            padding: 15px;
+            background: #e9ecef;
+            border-radius: 5px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="border">Student Portfolio</div>
+    <div class="container">
+        <h1>Welcome to My Portfolio</h1>
+        <div class="buttons">
+            <button onclick="showContent('achievements')">Achievements</button>
+            <button onclick="showContent('projects')">Projects</button>
+            <button onclick="showContent('skills')">Skills</button>
+        </div>
+        <div id="content" class="content"></div>
+    </div>
+    <div class="border">End of Portfolio</div>
+
+    <script>
+        function showContent(type) {
+            let contentDiv = document.getElementById("content");
+            if (type === 'achievements') {
+                contentDiv.innerHTML = "<h2>Achievements</h2><p>Won XYZ coding competition, Published research paper...</p>";
+            } else if (type === 'projects') {
+                contentDiv.innerHTML = "<h2>Projects</h2><p>Developed an e-commerce website, Created a mobile app...</p>";
+            } else if (type === 'skills') {
+                contentDiv.innerHTML = "<h2>Skills</h2><p>HTML, CSS, JavaScript, PHP, Python...</p>";
+            }
+            contentDiv.style.display = "block";
+        }
+    </script>
+</body>
+</html>
