@@ -2,80 +2,99 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Portfolio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f4f4f4;
-            padding: 20px;
-        }
-        .border {
-            background-color: #007BFF;
-            color: white;
-            padding: 10px;
-            font-size: 24px;
-            font-weight: bold;
-        }
-        .container {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
-            margin: auto;
-        }
-        h1 {
-            color: #333;
-        }
-        .buttons button {
-            margin: 10px;
-            padding: 10px 20px;
-            font-size: 16px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            background-color: #007BFF;
-            color: white;
-        }
-        .buttons button:hover {
-            background-color: #0056b3;
-        }
-        .content {
-            margin-top: 20px;
-            padding: 15px;
-            background: #e9ecef;
-            border-radius: 5px;
-            display: none;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="border">Student Portfolio</div>
-    <div class="container">
-        <h1>Welcome to My Portfolio</h1>
-        <div class="buttons">
-            <button onclick="showContent('achievements')">Achievements</button>
-            <button onclick="showContent('projects')">Projects</button>
-            <button onclick="showContent('skills')">Skills</button>
-        </div>
-        <div id="content" class="content"></div>
-    </div>
-    <div class="border">End of Portfolio</div>
 
-    <script>
-        function showContent(type) {
-            let contentDiv = document.getElementById("content");
-            if (type === 'achievements') {
-                contentDiv.innerHTML = "<h2>Achievements</h2><p>Won XYZ coding competition, Published research paper...</p>";
-            } else if (type === 'projects') {
-                contentDiv.innerHTML = "<h2>Projects</h2><p>Developed an e-commerce website, Created a mobile app...</p>";
-            } else if (type === 'skills') {
-                contentDiv.innerHTML = "<h2>Skills</h2><p>HTML, CSS, JavaScript, PHP, Python...</p>";
-            }
-            contentDiv.style.display = "block";
-        }
-    </script>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">My Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section text-center text-white">
+        <div class="container">
+            <h1>Welcome to My Portfolio</h1>
+            <p>Showcasing my skills, achievements, and projects</p>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="container my-5">
+        <h2 class="text-center">About Me</h2>
+        <p class="text-center">I am a passionate web developer with expertise in frontend development using HTML, CSS, Bootstrap, and JavaScript.</p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="container my-5">
+        <h2 class="text-center">Skills</h2>
+        <div class="row text-center">
+            <div class="col-md-4">
+                <h4>HTML</h4>
+            </div>
+            <div class="col-md-4">
+                <h4>CSS</h4>
+            </div>
+            <div class="col-md-4">
+                <h4>Bootstrap</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="container my-5">
+        <h2 class="text-center">Projects</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/project1.jpg" class="card-img-top" alt="Project 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Project 1</h5>
+                        <p class="card-text">Description of project 1.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/project2.jpg" class="card-img-top" alt="Project 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Project 2</h5>
+                        <p class="card-text">Description of project 2.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container my-5 text-center">
+        <h2>Contact Me</h2>
+        <p>Email: example@example.com</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center bg-dark text-white py-3">
+        <p>&copy; 2025 My Portfolio</p>
+    </footer>
+
+    <!-- Bootstrap Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
